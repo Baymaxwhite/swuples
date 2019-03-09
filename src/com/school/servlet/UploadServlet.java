@@ -76,7 +76,7 @@ public class UploadServlet extends HttpServlet {
                 request.getSession().setAttribute("news",news);//栏目
                 request.getSession().setAttribute("desc",desc);//拽要
                 request.getSession().setAttribute("url",url);//内容
-                jsonObject.put("url","/SchoolManagerSystem/webs/news/news_home.jsp");
+                jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
             }else{
                 jsonObject.put("msg","内容不能为空");
             }

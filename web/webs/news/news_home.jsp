@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>西南政法大学 SWUPL</title>
-		<link href="../../static/css/web/news/news_home.css" type="text/css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/static/css/web/news/news_home.css" type="text/css" rel="stylesheet" />
 		<!--<script src="js/测试1.js"></script>-->
 		<!--<script src="js/测试2.js"></script>-->
 	</head>
@@ -224,35 +224,35 @@
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">${title}</a></h4>
-								<p>${desc}</p>
+								<h4><a href="#">${areOne.newsTitle}</a></h4>
+								<p>${areOne.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="${news.newsImage}"/></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areOne.newsImage}"/></a></div>
 					</li>
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">${title}</a></h4>
-								<p>${desc}</p>
+								<h4><a href="#">${areTwo.newsTitle}</a></h4>
+								<p>${areTwo.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="${news.newsImage}" /></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areTwo.newsImage}" /></a></div>
 					</li>
 				</ul>
 				<ul>
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">西政报</a></h4>
-								<p>《西南政法大学报》由西南政法大学党委宣传部（党委网络工作部、新闻中心）主办，系全校权威纸媒平台。</p>
+								<h4><a href="#">${areThree.newsTitle}</a></h4>
+								<p>${areThree.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="img/news_img/news_main_img3.jpg" /></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areThree.newsImage}" /></a></div>
 					</li>
 					<li class="main_banner_min">
 						<div class="banner_min_lf">
-						<a href="#"><img id="image" src="img/news_img/news_main_img4.jpg" /><span>广电台</span></a>
+						<a href="#"><img id="image" src="${areFour.newsImage}" /><span>${areFour.newsTitle}</span></a>
 						</div>
 						<div class="banner_min_rt">
 

@@ -7,6 +7,7 @@ import com.school.entity.News;
 import com.school.service.NewsService;
 import com.school.tools.Database;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,4 +48,19 @@ public class NewsServiceImpl implements NewsService {
         }
         return map;
     }
+
+    @Override
+    public News getNewsAreContent(int newsAre) {
+        News news=null;
+        try {
+            news= new NewsDaoImpl(db.getConn()).findByNewsAre(newsAre);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            this.db.close();
+        }
+        return news;
+
+    }
+
 }

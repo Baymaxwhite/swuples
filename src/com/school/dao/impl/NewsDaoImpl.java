@@ -128,4 +128,23 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
     }
 
 
+    @Override
+    public News findByNewsAre(int newsAre) throws SQLException {
+        News news=new News();
+        String sql="select * from news where newsArea=?";
+        ResultSet rst=super.executeQuery(sql,newsAre);
+        if(rst.next()){
+            news.setNewsId(rst.getInt(1));
+            news.setContent(rst.getString(2));
+            news.setAuthor(rst.getString(3));
+            news.setPublishdate(rst.getDate(4));
+            news.setIsBackground(rst.getShort(5));
+            news.setDescrib(rst.getString(6));
+            news.setNewsImage(rst.getString(7));
+            news.setNewsTitle(rst.getString(8));
+            news.setNewsArea(rst.getInt(9));
+            news.setNewsType(rst.getString(10));
+        }
+        return news;
+    }
 }
