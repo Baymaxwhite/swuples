@@ -9,7 +9,7 @@ public class News {
     private Date publishdate;
     private short isBackground;
     private String describ;
-    private long newsImage;
+    private String newsImage;
     private String newsTitle;
     private int newsArea;
     private String newsType;
@@ -62,11 +62,11 @@ public class News {
         this.describ = describ;
     }
 
-    public long getNewsImage() {
+    public String getNewsImage() {
         return newsImage;
     }
 
-    public void setNewsImage(long newsImage) {
+    public void setNewsImage(String newsImage) {
         this.newsImage = newsImage;
     }
 

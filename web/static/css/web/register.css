@@ -82,7 +82,7 @@ body{
     margin-left: 75px;
     margin-top: 140px;
     float: left;
-    background-image: url(../../img/web/login_logo.png);
+    background-image: url(../../img/admin/login_logo.png);
     background-size: 596px;
     width: 420px;
     height: 365px;
@@ -94,7 +94,7 @@ body{
     width: 600px;
     height: 640px;
     float: left;
-    background-image: url(../../img/web/login_form.png);
+    background-image: url(../../img/admin/login_form.png);
     background-size: 600px;
     background-position-y: -50px;
 }

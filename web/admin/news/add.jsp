@@ -62,7 +62,10 @@
                 <div class="form-group">
                     <label for="news_image" class="col-md-3 control-label">是否有图片</label>
                     <div class="col-md-6">
-                        <Input type="radio" value="1"  name="news_image" id="news_image" onclick="Yesimages()">是<Input type="radio" value="0"  name="news_image" onclick="Noimages()">否
+                        <select class="news_image" id="news_image">
+                            <option value="1" onclick="Yesimages()">是</option>
+                            <option value="0" onclick="Noimages()">否</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group" style="display: none" id="imagess">
@@ -75,12 +78,6 @@
                     <label for="news_author" class="col-md-3 control-label">发布作者</label>
                     <div class="col-md-6">
                         <input type="text" name="news_author" id="news_author" class="form-control input-sm">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="news_createtime" class="col-md-3 control-label">发布时间</label>
-                    <div class="col-md-6">
-                        <input type="text" name="news_createtime" id="news_createtime" class="form-control input-sm" placeholder="YYYY/MM/DD"/>
                     </div>
                 </div>
                 <div class="from-group">
@@ -110,16 +107,16 @@
     // }
 
     function  save() {
-        var news=$("#news").val();
-        var title=$("#news_title").val();
-        var conctent=ue.getAllHtml();
-        var desc=$("#news_desc").val();
-        var Flagimage=$("input:radio").val();
-        var createtime=$("#news_createtime").val();
+        var news=$("#news").val();//栏目
+        var title=$("#news_title").val();//标题
+        var conctent=ue.getContent();//内容
+        var desc=$("#news_desc").val();//摘要
+        var Flagimage=$("#news_image").val();//是否有图片
+        var author=$("#news_author").val();//发布作者
         $.ajax({
             url:"/SchoolManagerSystem/admin/UploadServlet/add", //提交地址 servlet
             type:"post", //提交方式 post/get
-            data:{news:news,title:title,conctent:conctent,createtime:createtime,desc:desc,Flagimage:Flagimage},//{参数名称1:‘值1’,参数名称2:‘值2’,....}
+            data:{news:news,title:title,conctent:conctent,desc:desc,Flagimage:Flagimage,author:author},//{参数名称1:‘值1’,参数名称2:‘值2’,....}
             dataType:"json",//提交数据类型 如果跨域提交用jsonp
             async:true,
             success:function(data){ //提交成功后返回数据执行

@@ -27,7 +27,7 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
      */
     @Override
     public boolean createData(News vo) throws SQLException {
-        String sql = "insert into news (content,author,publishdate,isBackground,desc,newsImage,newsTitle,newsArea,newsType) values(?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into news (content,author,publishdate,isBackground,describ,newsImage,newsTitle,newsArea,newsType) values(?,?,?,?,?,?,?,?,?)";
         int rel=super.executeUpdate(sql,vo.getContent(),vo.getAuthor(),new Timestamp(new Date().getTime()),vo.getIsBackground(),vo.getDescrib(),vo.getNewsImage(),vo.getNewsTitle(),vo.getNewsArea(),vo.getNewsType());
         return rel > 0;
     }
@@ -66,7 +66,7 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
     @Override
     public News findById(String id) throws SQLException {
         News vo = null;
-        String sql = "select newsId,content,author,publishdate,isBackground,desc,newsImage,newsTitle,newsArea,newsType from news where content=?";
+        String sql = "select newsId,content,author,publishdate,isBackground,describ,newsImage,newsTitle,newsArea,newsType from news where newsTitle=?";
         ResultSet rs = super.executeQuery(sql,id);
         if(rs.next()){
             vo = new News();
@@ -76,7 +76,7 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
             vo.setPublishdate(rs.getDate(4));
             vo.setIsBackground(rs.getShort(5));
             vo.setDescrib(rs.getString(6));
-            vo.setNewsImage(rs.getLong(7));
+            vo.setNewsImage(rs.getString(7));
             vo.setNewsTitle(rs.getString(8));
             vo.setNewsArea(rs.getInt(9));
             vo.setNewsType(rs.getString(10));
@@ -109,7 +109,7 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
             newes.setPublishdate(rst.getDate(4));
             newes.setIsBackground(rst.getShort(5));
             newes.setDescrib(rst.getString(6));
-            newes.setNewsImage(rst.getLong(7));
+            newes.setNewsImage(rst.getString(7));
             newes.setNewsTitle(rst.getString(8));
             newes.setNewsArea(rst.getInt(9));
             newes.setNewsType(rst.getString(10));

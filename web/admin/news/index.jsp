@@ -29,10 +29,10 @@
                 <tbody>
                 <c:forEach  items="${news}" var="news">
                     <tr>
-                        <td>${news.newsId }</td>
-                        <td>${news.newsType }</td>
-                        <td>${news.newsTitle }</td>
-                        <td>${news.content }</td>
+                        <td>${news.newsId}</td>
+                        <td>${news.newsType}</td>
+                        <td>${news.newsTitle}</td>
+                        <td>${news.content}</td>
                         <td>
                             <c:choose>
                                 <c:when test="${news.isBackground == 1 }">有照片</c:when>
@@ -42,7 +42,7 @@
                         <td>
                             <fmt:formatDate value="${news.publishdate}" pattern="yyyy-MM-dd HH:mm:ss"/>
                         </td>
-                        <button type="button" class="btn btn-danger btn-sm"  id="delBtn" >删除</button></td>
+                        <td><button type="button" id="editBtn" class="btn btn-primary btn-sm">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-sm"  id="delBtn" >删除</button></td>
                     </tr>
                 </c:forEach>
                 </tbody>

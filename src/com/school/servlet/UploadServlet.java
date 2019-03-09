@@ -53,27 +53,45 @@ public class UploadServlet extends HttpServlet {
         String desc=request.getParameter("desc");
         String title=request.getParameter("title");
         String conctent=request.getParameter("conctent");
-        String createtime=request.getParameter("createtime");
         String Flagimage=request.getParameter("Flagimage");
+        String author=request.getParameter("author");
+        String content =request.getParameter("conctent");
+        String url = content.split("src=")[1].split("\"")[1];
+        System.out.println(url);
         //存入数据库
         News news1=new News();
-        news1.setNewsType(news);
+        news1.setNewsArea(Integer.parseInt(news));
         news1.setDescrib(desc);
         news1.setNewsTitle(title);
+        news1.setNewsType(title);
         news1.setContent(conctent);
         news1.setIsBackground(Short.parseShort(Flagimage));
-        System.out.println(Flagimage);
-        System.out.println(desc);
-        if (conctent!=null) {
-            loginFlag = 1;
-            request.getSession().setAttribute("title",title);
-            request.getSession().setAttribute("news",news);
-            request.getSession().setAttribute("desc",desc);
-            request.getSession().setAttribute("conctent",conctent);
-            request.getSession().setAttribute("createtime",createtime);
-            jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
+        news1.setAuthor(author);
+        System.out.println(conctent.contains("src"));
+        if (conctent.contains("src")){
+            news1.setNewsImage(url);
+            if (new NewsServiceImpl().insert(news1)) {
+                loginFlag = 1;
+                request.getSession().setAttribute("title",title);//标题
+                request.getSession().setAttribute("news",news);//栏目
+                request.getSession().setAttribute("desc",desc);//拽要
+                request.getSession().setAttribute("url",url);//内容
+                jsonObject.put("url","/SchoolManagerSystem/webs/news/news_home.jsp");
+            }else{
+                jsonObject.put("msg","内容不能为空");
+            }
         }else{
-            jsonObject.put("msg","内容不能为空");
+            news1.setNewsImage("null");
+            if (new NewsServiceImpl().insert(news1)) {
+                loginFlag = 1;
+                request.getSession().setAttribute("title",title);//标题
+                request.getSession().setAttribute("news",news);//栏目
+                request.getSession().setAttribute("desc",desc);//拽要
+                request.getSession().setAttribute("conctent",conctent);//内容
+                jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
+            }else{
+                jsonObject.put("msg","内容不能为空");
+            }
         }
         jsonObject.put("flag",loginFlag);
         response.getWriter().print(jsonObject.toString());
