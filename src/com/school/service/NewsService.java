@@ -2,6 +2,7 @@ package com.school.service;
 
 import com.school.entity.News;
 
+import java.util.List;
 import java.util.Map;
 
 public interface NewsService {
@@ -14,5 +15,8 @@ public interface NewsService {
     boolean insert(News vo) throws Exception;
 
     public Map<String, Object> listBySplit(String column, String keyword, int currentPage, int lineSize) throws Exception;
+
     News getNewsAreContent(int newsAre);
+
+//    List<News> findByNewsAre();
 }

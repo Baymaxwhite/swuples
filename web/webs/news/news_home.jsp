@@ -262,66 +262,66 @@
 				<ul>
 					<li>
 						<div class="banner_qc">
-							<a href="#"><img src="img/news_img/news_main_img5.jpg" />新浪微博</a>
+							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
 						</div>
 						<div class="banner_qc">
-							<a href="#"><img src="img/news_img/news_main_img6.jpg" />新浪微博</a>
+							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
 						</div>
 						<div class="banner_qc">
-							<a href="#"><img src="img/news_img/news_main_img7.jpg" />微信频道</a>
+							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
 						</div>
 					</li>
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">图说西政</a></h4>
-								<p>西南政法大学就业信息网提供全面快速的就业信息、就业指导。 </p>
+								<h4><a href="#">${areSeven.newsTitle}</a></h4>
+								<p>${areSeven.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="img/news_img/news_main_img8.jpg" /></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areSeven.newsImage}" /></a></div>
 					</li>
 				</ul>
 				<ul>
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">橱窗画册</a></h4>
-								<p>西政橱窗网络版是校内橱窗展示的网络平台，您可以在这里查看校内橱窗展示的所有内容。</p>
+								<h4><a href="#">${areEight.newsTitle}</a></h4>
+								<p>${areEight.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="img/news_img/news_main_img9.jpg" /></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areEight.newsImage}" /></a></div>
 					</li>
 					<li>
 						<div class="main_font">
 							<div class="font_top">
-								<h4><a href="#">展览馆</a></h4>
-								<p>网上展览馆陈列了我校三次创业时期的辉煌成就，供社会各界参观。</p>
+								<h4><a href="#">${areNine.newsTitle}</a></h4>
+								<p>${areNine.describ}</p>
 							</div>
 						</div>
-						<div class="banner_hidden"><a href="#"><img id="image" src="img/news_img/news_main_img10.jpg" /></a></div>
+						<div class="banner_hidden"><a href="#"><img id="image" src="${areNine.newsImage}" /></a></div>
 					</li>
 				</ul>
 				<ul>
 					<li class="main_banner_min">
 						<div class="banner_min_lf">
-							<a href="#"><img id="image" src="img/news_img/news_main_img11.jpg" /><span>各类专题</span></a>
+							<a href="#"><img id="image" src="${areTen.newsImage}" /><span>${areTen.newsTitle}</span></a>
 						</div>
 						<div class="banner_min_rt">
-							<a href="#"><img id="image" src="img/news_img/news_main_img12.jpg" /><span>校园刊物</span></a>	
+							<a href="#"><img id="image" src="${areEleven.newsImage}" /><span>${areEleven.newsTitle}</span></a>
 						</div>
 					</li>
 					<li class="main_banner_min">
 						<div class="banner_min_lf">
 							<div class="font_min_lf">
 								<div class="font_lf_top">
-								<h4>讲座论坛</h4>
-								<a href="#"><img src="img/news_img/news_main_img13.jpg" style="width: 11px; height: 12px;"/></a>
+								<h4>${areTwelve.newsTitle}</h4>
+								<a href="#"><img src="/SchoolManagerSystem/upload/image/int06.png" style="width: 11px; height: 12px;"/></a>
 								</div>
 								<div class="font_lf_down">
-								<p><i>主讲题目：</i><a href="#">北京大学张守文教授将做客金开名家讲坛</a></p>
-								<p><i>主 讲 人：</i><em>经济法与经济法研究的若干前沿问题</em></p>
-								<p><i></i>时间：</span><em>2018年1月13日19：00</em></p>
-								<p><i>地点：</i><em>敬业楼6029会议室</em></p>
+								<p><i>主讲题目：</i><a href="#">${areTwelve.content}</a></p>
+								<p><i>主 讲 人：</i><em>${areTwelve.author}</em></p>
+								<p><i></i>时间：</span><em>${areTwelve.publishdate}</em></p>
+								<p><i>地点：</i><em>${areTwelve.describ}</em></p>
 								</div>
 							</div>
 						</div>
@@ -329,7 +329,7 @@
 							<div class="font_min_rt">
 								<div class="font_rt_top">
 								<h4>通知公告</h4>
-								<a href="#"><img src="img/news_img/news_main_img13.jpg" style="width: 11px; height: 12px;"/></a>
+								<a href="#"><img src="/SchoolManagerSystem/upload/image/int06.png" style="width: 11px; height: 12px;"/></a>
 								</div>
 								<div class="font_rt_down" >
 									<a href="#"><img src="img/news_img/news_main_img14.jpg" /><p>关于启动“2018年优秀本科生国际交... [2018-03-05]</p> </a>

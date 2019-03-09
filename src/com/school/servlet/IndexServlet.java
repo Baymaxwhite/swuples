@@ -37,6 +37,11 @@ public class IndexServlet extends HttpServlet {
         request.getSession().setAttribute("areFive",new NewsServiceImpl().getNewsAreContent(5));
         request.getSession().setAttribute("areSix",new NewsServiceImpl().getNewsAreContent(6));
         request.getSession().setAttribute("areSeven",new NewsServiceImpl().getNewsAreContent(7));
+        request.getSession().setAttribute("areEight",new NewsServiceImpl().getNewsAreContent(8));
+        request.getSession().setAttribute("areNine",new NewsServiceImpl().getNewsAreContent(9));
+        request.getSession().setAttribute("areTen",new NewsServiceImpl().getNewsAreContent(10));
+        request.getSession().setAttribute("areEleven",new NewsServiceImpl().getNewsAreContent(11));
+        request.getSession().setAttribute("areTwelve",new NewsServiceImpl().getNewsAreContent(12));
         request.getRequestDispatcher("/webs/news/news_home.jsp").forward(request,response);
 
     }

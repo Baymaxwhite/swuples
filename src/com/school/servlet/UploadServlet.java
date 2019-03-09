@@ -56,8 +56,6 @@ public class UploadServlet extends HttpServlet {
         String Flagimage=request.getParameter("Flagimage");
         String author=request.getParameter("author");
         String content =request.getParameter("conctent");
-        String url = content.split("src=")[1].split("\"")[1];
-        System.out.println(url);
         //存入数据库
         News news1=new News();
         news1.setNewsArea(Integer.parseInt(news));
@@ -67,8 +65,8 @@ public class UploadServlet extends HttpServlet {
         news1.setContent(conctent);
         news1.setIsBackground(Short.parseShort(Flagimage));
         news1.setAuthor(author);
-        System.out.println(conctent.contains("src"));
         if (conctent.contains("src")){
+            String url = content.split("src=")[1].split("\"")[1];
             news1.setNewsImage(url);
             if (new NewsServiceImpl().insert(news1)) {
                 loginFlag = 1;
@@ -76,7 +74,7 @@ public class UploadServlet extends HttpServlet {
                 request.getSession().setAttribute("news",news);//栏目
                 request.getSession().setAttribute("desc",desc);//拽要
                 request.getSession().setAttribute("url",url);//内容
-                jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
+                jsonObject.put("url","/SchoolManagerSystem/admin/news/add.jsp");
             }else{
                 jsonObject.put("msg","内容不能为空");
             }
@@ -88,7 +86,7 @@ public class UploadServlet extends HttpServlet {
                 request.getSession().setAttribute("news",news);//栏目
                 request.getSession().setAttribute("desc",desc);//拽要
                 request.getSession().setAttribute("conctent",conctent);//内容
-                jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
+                jsonObject.put("url","/SchoolManagerSystem/admin/news/add.jsp");
             }else{
                 jsonObject.put("msg","内容不能为空");
             }

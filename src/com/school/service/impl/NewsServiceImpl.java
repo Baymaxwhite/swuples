@@ -9,6 +9,7 @@ import com.school.tools.Database;
 
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class NewsServiceImpl implements NewsService {
@@ -62,5 +63,20 @@ public class NewsServiceImpl implements NewsService {
         return news;
 
     }
+
+//    @Override
+//    public List<News> findByNewsAre() {
+//        List<News> newss=null;
+//
+//        try {
+//            newss=new NewsDaoImpl(db.getConn()).findByNewsAre();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }finally {
+//            this.db.close();
+//        }
+//        return newss;
+//    }
+
 
 }

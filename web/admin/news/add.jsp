@@ -68,7 +68,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group" style="display: none" id="imagess">
+                <div class="form-group" id="imagess">
                     <label for="editor" class="col-md-3 control-label">新闻内容</label>
                     <div class="col-md-6">
                         <textarea id="editor" name="editor" type="text/plain"></textarea>
@@ -135,12 +135,12 @@
         })
     }
 
-    function Yesimages(){
-        $("#imagess").show();
-    }
-    function Noimages(){
-        $("#imagess").hide();
-    }
+    // function Yesimages(){
+    //     $("#imagess").show();
+    // }
+    // function Noimages(){
+    //     $("#imagess").hide();
+    // }
 </script>
 
 
