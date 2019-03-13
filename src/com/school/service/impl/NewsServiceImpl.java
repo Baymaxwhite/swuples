@@ -77,5 +77,13 @@ public class NewsServiceImpl implements NewsService {
         return news;
     }
 
+    @Override
+    public boolean delById(int id) throws Exception {
+        if(new NewsDaoImpl(db.getConn()).delById(id)){
+            return true;
+        }
+        return false;
+    }
+
 
 }

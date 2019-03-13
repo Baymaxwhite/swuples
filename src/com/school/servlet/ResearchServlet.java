@@ -114,7 +114,7 @@ public class ResearchServlet extends HttpServlet {
         Integer id=Integer.parseInt(request.getParameter("id"));
         JSONObject jsonObject=new JSONObject();
         try {
-            if(new AdminServiceImpl().delById(id)){
+            if(new ResearchServiceImpl().delById(id)){
                 jsonObject.put("url","/SchoolManagerSystem/admin/research/index.jsp");
                 jsonObject.put("msg","删除成功");
                 status=1;

@@ -168,5 +168,12 @@ public class NewsDaoImpl extends BaseDaoImpl implements NewsDao{
         return news;
     }
 
+    @Override
+    public boolean delById(int id) throws Exception {
+        String sql ="delete from news where newsId=?";
+        int rel=super.executeUpdate(sql,id);
+        return rel>0;
+    }
+
 
 }

@@ -66,7 +66,7 @@
             }
             $.ajax({
                 type: "post",
-                url: "/SchoolManagerSystem/admin/UploadServlet/del",
+                url: "/SchoolManagerSystem/admin/ResearchServlet/del",
                 dataType:"json",
                 data: { id: rowid },
                 success: function (data, status) {

@@ -18,4 +18,6 @@ public interface NewsService {
 
     News getNewsAreContent(int newsAre);
     News getNewsTitleContent(String newsTitle);
+
+    boolean delById(int id) throws Exception;
 }

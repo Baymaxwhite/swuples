@@ -116,7 +116,7 @@ public class UploadServlet extends HttpServlet {
         Integer id=Integer.parseInt(request.getParameter("id"));
         JSONObject jsonObject=new JSONObject();
         try {
-            if(new AdminServiceImpl().delById(id)){
+            if(new NewsServiceImpl().delById(id)){
                 jsonObject.put("url","/SchoolManagerSystem/admin/news/index.jsp");
                 jsonObject.put("msg","删除成功");
                 status=1;

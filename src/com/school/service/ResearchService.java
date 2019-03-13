@@ -10,4 +10,6 @@ public interface ResearchService {
     public Map<String, Object> listBySplit(String column, String keyWord, int currentPage, int lineSize) throws Exception;
 
     Research getResearchAreContent(int researchAre);
+
+    boolean delById(int id) throws Exception;
 }

@@ -54,4 +54,12 @@ public class ResearchServiceImpl implements ResearchService {
 
     }
 
+    @Override
+    public boolean delById(int id) throws Exception {
+        if(new ResearchDaoImpl(db.getConn()).delById(id)){
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -36,6 +36,13 @@ public class ResearchDaoImpl extends BaseDaoImpl implements ResearchDao {
         return research;
     }
 
+    @Override
+    public boolean delById(int id) throws Exception {
+        String sql ="delete from research where researchId=?";
+        int rel=super.executeUpdate(sql,id);
+        return rel>0;
+    }
+
     /**
      * 实现数据增加操作
      *
