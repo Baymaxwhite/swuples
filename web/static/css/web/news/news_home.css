@@ -1,0 +1,363 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+header{background-color: #6b6b6b;width:auto;height: auto;position: relative;z-index: 1;height:300px;}
+/*上一排为第一层背景*/
+.head_bgrongdimg{background-image:url('../img/background 01.jpg') ; background-position: center;width:auto;background-repeat: no-repeat;    position: relative; height: 300px; top: -120px; text-align: center;z-index: -1;margin: 0 auto;}
+/*上一排为第二层背景:图书馆照片*/
+.head{height: 120px;background:url('../img/header_bg (1).png') repeat;width: auto;margin: 0 auto;min-width: 300px;}
+.head_top{width: 1120px;margin: 0 auto;}
+/*开始logo部分*/
+.head_top_logo{position: relative;top: 23px;width: 200px;height: 76px;display: inline-block;}
+/*开始右上角链接部分*/
+.head_top_link{width: 450px;position: relative;top: 19px;right: 0;display: inline-block;float: right;}
+.head_top_link ul li{float: left;margin: 0 12px;}
+.head_top_link ul li a{color: #ffffff;font-size: 14px;}
+.head_top_link ul li:hover a{color: red;}
+.head_top_link ul li:last-child:hover form.head_top_link_search{display: block;}
+form.head_top_link_search {position:absolute;left:41px;top:33px;float: right;display: none;}
+form.head_top_link_search input{width: 340px; height: 30px;position: relative;top: -11px;left: 5px;background-color: #d7d6d4;border:none;}
+form.head_top_link_search img{cursor: pointer;}
+/*结束右上角链接部分，
+ 开始导航部分*/
+.head_top_nav_homepage{    font-size: 18px;padding: 0 26px; float: right;line-height: 30px;}
+.head_top_nav_homepage a{color: #fff;}
+.head_top_nav_homepage:hover a{color: red;}
+
+.head_top_nav{width: 820px;height: 48px;    float: right;    line-height: 30px;}
+.head_top_nav ul.head_top_nav_ul li{float: left;width: 16.6%;text-align: center;height: 40px;}
+.head_top_nav ul li a.head_top_nav_ul_a{color: #fff;font-size: 18px;}
+.head_top_nav ul li.head_top_nav_ul_li:hover a.head_top_nav_ul_a{color: red;}
+.head_top_nav ul li img{position: relative;z-index: -1;left: 4px;}
+.head_top_nav ul li:hover img{position: relative;z-index: 2;}
+.head_top_nav a:hover{color: red;}
+.head_top_nav a.head_top_nav_ul_more:hover{color: red;}
+
+.head_top_nav_ul_intro_content,
+.head_top_nav_ul_news_content,
+.head_top_nav_ul_college_content,
+.head_top_nav_ul_subject_content,
+.head_top_nav_ul_getjob_content,
+.head_top_nav_ul_academic_content{ width: 1120px;background:url('../img/nav_bg2.png') repeat;height: auto;margin: 0 auto;z-index: 5;}
+
+.head_top_nav_ul_intro_content   {position: relative;top:9px;left: -300px ;   display:none;}
+.head_top_nav_ul_news_content    {position: relative;top:9px;left: -436.11px ;display:none;}
+.head_top_nav_ul_college_content {position: relative;top:9px;left: -572.22px ;display:none;}
+.head_top_nav_ul_subject_content {position: relative;top:9px;left: -708.11px ;display:none;}
+.head_top_nav_ul_getjob_content  {position: relative;top:9px;left: -844.44px ;display:none;}
+.head_top_nav_ul_academic_content{position: relative;top:9px;left: -980.55px ;display:none;}
+/*开始学校简介*/
+.head_top_nav_ul_intro_content_list{border-right: 1px solid #CCCCCC;padding-right: 20px; margin: 25px 0px 0px 20px;display: inline-block;width: 290px;float: left;}
+.head_top_nav_ul_intro_content_list a{line-height: 20px;color:#000000;font-size: 14px;padding:6px 18px;float: left;}
+.head_top_nav_ul_intro_content_text{display: inline-block;margin: 25px 0px 0px 20px;}
+.head_top_nav_ul_intro_content_text p{width: 700px;font-size: 14px;padding: 4px;line-height: 25px;    text-align: left;}
+.head_top_nav_ul_intro_content_text a.head_top_nav_ul_more{display: block;padding: 0px 0 10px 0px;font-size: 12px;    float: right;color: #000000;}
+/*开始新闻资讯*/
+.head_top_nav_ul_news_content_list{border-right: 1px solid #CCCCCC;padding-right: 20px; margin: 25px 0px 0px 20px;display: inline-block;width: 290px;float: left;}
+.head_top_nav_ul_news_content_list a{line-height: 20px;color:#000000;font-size: 14px;padding:6px 18px;float: left;}
+.head_top_nav_ul_news_content_list a:nth-child(2),
+.head_top_nav_ul_news_content_list a:nth-child(3),
+.head_top_nav_ul_news_content_list a:nth-child(4),
+.head_top_nav_ul_news_content_list a:nth-child(10){letter-spacing: 5px;}
+.head_top_nav_ul_news_content_text{width: 700px;display: inline-block;margin: 25px 0px 0px 50px;text-align: left;}
+.head_top_nav_ul_news_content_text div{margin-bottom: 20px;}
+.head_top_nav_ul_news_content_text a{line-height: 20px;color:#000000;font-size: 14px;}
+.head_top_nav_ul_news_content_text div a:before{content: "" url('../img/nav02方向右.png');padding-right: 20px;}
+.head_top_nav_ul_news_content_text p{font-size:12px; line-height: 20px; margin-left: 30px;  }
+.head_top_nav_ul_news_content_text a.head_top_nav_ul_more{display: block;padding: 0px 0 20px 0px;font-size: 12px;   color: #000000; float: right;}
+/*开始学院机构*/
+.head_top_nav_ul_college_content ul:first-child{ height: 350px; text-align: left; border-right: 1px solid #CCCCCC;padding-right: 20px; margin: 25px 0px 0px 0px;display: inline-block;    width: 330px;float: left;}
+.head_top_nav_ul_college_content ul:first-child li{width:126px ;line-height: 20px;font-size: 14px;padding:6px 18px;text-align: left;    height: auto;}
+.head_top_nav_ul_college_content ul:first-child li a{color:#000000;}
+.head_top_nav_ul_college_content ul:last-child{display: inline-block;margin: 25px 0px 0px 0px;width: 738px;}
+.head_top_nav_ul_college_content ul:last-child li{width:210px ;line-height: 20px;font-size: 14px;padding:6px 18px;text-align: left;    height: auto;}
+.head_top_nav_ul_college_content ul:last-child li a{color:#000000;}
+.head_top_nav_ul_college_content ul li a:hover{color: red;}
+/*开始学科专业*/
+.head_top_nav_ul_subject_content_list{border-right: 1px solid #CCCCCC;padding-right: 20px; margin: 25px 0px 0px 20px;display: inline-block;  height: 50px;  width: 290px;float: left;}
+.head_top_nav_ul_subject_content_list a{line-height: 20px;color:#000000;font-size: 14px;padding:6px 18px;float: left;}
+.head_top_nav_ul_subject_content_text{width: 700px;display: inline-block;margin: 25px 0px 0px 50px;text-align: left;}
+.head_top_nav_ul_subject_content_text p{font-size:14px; line-height: 20px; padding: 4px;}
+.head_top_nav_ul_subject_content_text a.head_top_nav_ul_more{display: block;padding: 0px 0 20px 0px;font-size: 12px;  color: #000000;  float: right;}
+/*开始招生就业*/
+.head_top_nav_ul_getjob_content div:first-child {border-right: 1px solid #CCCCCC;padding-right: 40px; margin: 25px 0px 0px 20px;display: inline-block;  height: 102px;  width: 500px;float: left;text-align: left;}
+.head_top_nav_ul_getjob_content div:last-child{width: 500px;display: inline-block;margin: 25px 0px 0px 10px;text-align: left;}
+.head_top_nav_ul_getjob_content div img{float: left;margin-bottom: 30px;}
+.head_top_nav_ul_getjob_content div span {color: red;font-size: 15px;display:inline-block;width: 200px;float: left;margin-left: 10px;}
+.head_top_nav_ul_getjob_content div p{display: inline-block;font-size: 13px;margin-left: 10px;width: 300px;}
+.head_top_nav_ul_getjob_content div:first-child a.head_top_nav_ul_more{display:inline-block;padding: 0px 0 20px 0px;font-size: 12px;  color: #000000; margin-left: 10px;}
+.head_top_nav_ul_getjob_content div:last-child a.head_top_nav_ul_more{display: inline-block;padding: 0px 0 20px 0px;font-size: 12px;  color: #000000; margin-left: 10px;}
+.head_top_nav_ul_getjob_content div a.head_top_nav_ul_more:hover{color: red;}
+/*开始学术研究部分*/
+.head_top_nav_ul_academic_content_list{border-right: 1px solid #CCCCCC;padding-right: 20px; margin: 25px 0px 0px 20px;display: inline-block;  height: 60px;  width: 290px;float: left;}
+.head_top_nav_ul_academic_content_list a{line-height: 20px;color:#000000;font-size: 14px;padding:6px 15px;float: left;}
+.head_top_nav_ul_academic_content_text{width: 700px;display: inline-block;margin: 25px 0px 0px 10px;text-align: left;}
+.head_top_nav_ul_academic_content_text p{font-size:13px; line-height: 20px; }
+.head_top_nav_ul_academic_content_text a.head_top_nav_ul_more{display: block;padding: 0px 0 20px 0px;font-size: 12px;  color: #000000;  float: right;}
+/*开始隐藏和显示每个版块的子导航栏*/
+.head_top_nav ul li:hover .head_top_nav_ul_intro_content{display: block;}
+.head_top_nav ul li:hover .head_top_nav_ul_news_content{display: block;}
+.head_top_nav ul li:hover .head_top_nav_ul_college_content{display: block;}
+.head_top_nav ul li:hover .head_top_nav_ul_subject_content{display: block;}
+.head_top_nav ul li:hover .head_top_nav_ul_getjob_content{display: block;}
+.head_top_nav ul li:hover .head_top_nav_ul_academic_content{display: block;}
+/*开始每一页的红色标题*/
+.head_nav_title_label{   position: relative;top: 169px;}
+.head_nav_title_label div:first-child{width: 168px;font-size: 24px;color: #FFFFFF;background-color: #a3010c;text-align: center;position: relative;left: 10px;top: 7px;height: 44px;line-height: 44px;font-family: 'STHeiti Light',SimHei,'Microsoft YaHei';}
+.head_nav_title_label div:last-child{font-family: 'STHeiti Light',SimHei,'Microsoft YaHei'; width: 168px;font-size: 18px;color: #FFFFFF;background-color: #a3010c;text-align: right;padding: 8px 34px 7px 0 ;box-sizing: border-box;position: relative;top: 8px;left: 10px;}
+/*结束头部和导航*/
+
+/*开始主体内容main*/
+section.news_main_max{width: auto;background-color: #e8e8e8;padding-bottom: 50px;}
+/*主体内容框架*/
+.news_main_max .main{
+	width: 1120px;
+	margin: 0px auto;
+}
+/*开始每一行图片和文字框架和内容*/
+.news_main_max .main ul{
+	padding: 65px 10px 0px;
+	height: 242px;
+}
+
+.news_main_max .main ul li:first-child{
+	float: left;
+}
+
+.news_main_max .main ul li:last-child{
+	float: right;
+}
+
+.news_main_max .main ul li{
+	width: 48%;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+}
+/*开始图片样式设置*/
+.news_main_max .main ul li img{
+	display: block;
+	height: 242px;
+}
+/*结束图片样式设置*/
+
+/*开始文字样式设置*/
+.news_main_max .main ul li .main_font{
+	float: right;
+	width: 163px;
+}
+
+.news_main_max .main ul li .main_font .font_top{
+	padding: 10px 13px;
+}
+
+.news_main_max .main ul li .main_font .font_top h4{
+	font-size: 18px;
+    line-height: 2em;
+    font-weight: 100;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+.news_main_max .main ul li .main_font .font_top h4 a{
+	color: #a3010c;
+}
+
+.news_main_max .main ul li .main_font .font_top p{
+	padding-top: 10px;
+	font-size: 14px;
+    line-height: 24px;
+	font-weight: lighter;
+}
+/*结束文字样式设置*/
+
+/*开始设置图文样式*/
+.news_main_max .main ul .main_banner_min,
+.news_main_max .main ul .banner_down{
+	border: none;
+	background: none;
+}
+
+.news_main_max .banner_min_lf,
+.news_main_max .banner_min_rt{
+	width: 44%;
+	float: left;
+	overflow: hidden;
+}
+
+.news_main_max .banner_min_lf,
+.news_main_max .banner_min_rt{
+	border: 1px solid #bfbfbf;
+}
+
+.news_main_max .banner_min_lf a,
+.news_main_max .banner_min_rt a{
+	display: block;
+    width: 100%;
+    position: relative;
+}
+
+.news_main_max .banner_min_lf span,
+.news_main_max .banner_min_rt span{
+	width: 100%;
+    font-size: 20px;
+    line-height: 2.4em;
+    color: #fff;
+    text-align: center;
+    background: url(/SchoolManagerSystem/upload/image/con_bg.png) repeat;
+    position: absolute;
+    bottom: 0;
+}
+
+.news_main_max .banner_min_rt{
+	float: right;
+}
+
+/*结束设置图文样式*/
+
+/*开始设置二维码样式*/
+.news_main_max .main ul li .banner_qc{
+	width: 33.3%;
+	height: 242px;
+	float: left;
+}
+
+.news_main_max .main ul li .banner_qc a{
+	display: block;
+    margin-top: 25px;
+    padding: 0 7px;
+    font-size: 18px;
+    line-height: 3em;
+    color: #a3010c;
+    text-align: center;
+}
+
+.news_main_max .main ul li .banner_qc img{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+/*结束设置二维码样式*/
+
+/*开始设置文字样式*/
+.news_main_max .main ul .font_min_lf,
+.news_main_max .main ul .font_min_rt{
+	height: 242px;
+    background: #fff;
+    padding: 5px 10px;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_top,
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_top{
+	height: 40px;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_top h4,
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_top h4{
+	font-size: 18px;
+    line-height: 40px;
+    color: #a3010c;
+    font-weight: 100;
+    float: left;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_top img,
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_top img{
+	float: right;
+    padding-right: 11px;
+    padding-top: 22px;
+}   
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_down,
+.news_main_max .main ul .main_banner_min .font_min_lf .font_rt_down{
+	padding-top: 5px;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_down i{
+	font-style: normal;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_down p a{
+	font-size: 14px;
+    line-height: 23px;
+    font-weight: bold;
+    display: inline;
+    color: #323232;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_down p em{
+	font-size: 12px;
+    font-style: normal;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_down a{
+	padding: 5px 0 8px 17px;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_down a p{
+	font-size: 14px;
+    line-height: 20px;
+    width: 195px;
+    position: relative;
+    left: 4px;
+    color: #323232;
+}
+
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_down img{
+	height: 5px;
+	width: 5px;
+	position: relative;
+	top: 15px;
+	left: -11px;
+}
+/*结束设置文字样式*/
+
+/*结束每一行的图片和文字的框架和内容*/
+
+/*开始特殊效果设置*/
+.news_main_max .main ul .main_banner_min .font_min_rt .font_rt_down a p:hover,
+.news_main_max .main ul .main_banner_min .font_min_lf .font_lf_down p a:hover{
+	color: #c00a17;
+}
+
+.news_main_max .main ul li img:hover{
+    transform: scale(1.17,1.17);
+    opacity: .8;
+}
+
+.news_main_max .main ul li .banner_qc img:hover{
+	transform: none;
+	opacity: inherit;
+}
+
+.news_main_max .main ul li img{
+    transition: 1s;	
+}
+
+.news_main_max .main ul li .banner_hidden{
+	overflow: hidden;
+}
+/*结束特殊效果设置*/
+
+/*结束主体*/
+
+/*开始尾部*/
+footer{background-color: #7f010a;height: 193px;width: auto;}
+footer .foot{width: 1120px;margin: 0 auto;}
+footer .foot_left{border-right: 1px solid #CCCCCC;margin: 10px 5px 10px 0;width: 224px;height: 163px;float: left;}
+footer .foot_left_top{margin: 15px 0;}
+footer .foot_left_top img{width: 68px;height: 80px;float: left;margin: 15px 3px;}
+footer .foot_left_bottom img{width: 20px;height:20px;position: relative;top: 4px;}
+footer .foot_left_bottom span{color: #939393;font-size: 12px;align-content: center;}
+
+footer .foot_center{float: left;border-right: 1px solid #CCCCCC;margin: 10px 10px 10px 0;padding:0px 0px 0 10px;width: 418px;height: 160px;}
+footer .foot_center img{width: 155px;height: 54px;}
+footer .foot_center p{font-size: 12px;color: #FFFFFF;line-height: 25px;}
+
+footer .foot_right {float: left;margin: 30px 0px 0px 0px;width: auto;height: 158px;}
+footer .foot_right figure{float: left;padding: 18px;}
+footer .foot_right img{padding-bottom: 10px;}
+footer .foot_right figcaption{color: #FFFFFF;font-size: 12px;text-align: center;}
+footer .foot_right a:last-child figcaption{letter-spacing: 10px;padding-left: 6px;}
