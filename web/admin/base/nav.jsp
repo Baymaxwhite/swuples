@@ -86,7 +86,10 @@
                 <a href="#" data-toggle="collapse" data-target="#nav7"><i class="fa glyphicon glyphicon-align-justify "></i>学术研究<span class="fa arrow glyphicon glyphicon-menu-left"></span></a>
                 <ul class="nav nav-second-level collapse" id="nav7">
                     <li>
-                        <a href="/SchoolManagerSystem/admin/LendServlet/index"><i class="fa glyphicon glyphicon-record"></i>研究基地</a>
+                        <a href="/SchoolManagerSystem/admin/research/add.jsp"><i class="fa glyphicon glyphicon-record"></i>研究基地</a>
+                    </li>
+                    <li>
+                        <a href="/SchoolManagerSystem/admin/ResearchServlet/index"><i class="fa glyphicon glyphicon-record"></i>研究基地列表</a>
                     </li>
                 </ul>
             </li>

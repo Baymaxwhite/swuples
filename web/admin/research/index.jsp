@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2019/3/2
-  Time: 15:10
+  Date: 2019/3/13
+  Time: 8:45
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:include page="/admin/base/header.jsp"></jsp:include>
@@ -13,7 +13,7 @@
 <!-- 此处编写内容  -->
 <div id="page-wrapper">
     <div id="page-inner">
-        <c:if test="${news != null}">
+        <c:if test="${research != null}">
             <table class="table table-bordered table-hover " id="table">
                 <thead>
                 <tr>
@@ -27,20 +27,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach  items="${news}" var="news">
+                <c:forEach  items="${research}" var="researchs">
                     <tr>
-                        <td>${news.newsId}</td>
-                        <td>${news.newsType}</td>
-                        <td>${news.newsTitle}</td>
-                        <td>${news.content}</td>
+                        <td>${researchs.researchId}</td>
+                        <td>${researchs.researchType}</td>
+                        <td>${researchs.researchTitle}</td>
+                        <td>${researchs.content}</td>
                         <td>
                             <c:choose>
-                                <c:when test="${news.isBackground == 1 }">有照片</c:when>
+                                <c:when test="${researchs.isBackground == 1 }">有照片</c:when>
                                 <c:otherwise>无照片</c:otherwise>
                             </c:choose>
                         </td>
                         <td>
-                            <fmt:formatDate value="${news.publishdate}" pattern="yyyy-MM-dd HH:mm:ss"/>
+                            <fmt:formatDate value="${researchs.publishdate}" pattern="yyyy-MM-dd HH:mm:ss"/>
                         </td>
                         <td><button type="button" id="editBtn" class="btn btn-primary btn-sm">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-sm"  id="delBtn" >删除</button></td>
                     </tr>
@@ -56,10 +56,6 @@
 
 
 <script>
-
-
-
-
     <!--删除-->
     $("tbody #delBtn").click(function () {
         // $(this).parent().parent().remove()
@@ -95,3 +91,4 @@
 </script>
 
 <jsp:include page="/admin/base/footer.jsp"></jsp:include>
+

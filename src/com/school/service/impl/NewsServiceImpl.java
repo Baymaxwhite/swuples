@@ -64,19 +64,18 @@ public class NewsServiceImpl implements NewsService {
 
     }
 
-//    @Override
-//    public List<News> findByNewsAre() {
-//        List<News> newss=null;
-//
-//        try {
-//            newss=new NewsDaoImpl(db.getConn()).findByNewsAre();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }finally {
-//            this.db.close();
-//        }
-//        return newss;
-//    }
+    @Override
+    public News getNewsTitleContent(String newsTitle) {
+        News news=null;
+        try {
+            news= new NewsDaoImpl(db.getConn()).findByNewsTitle(newsTitle);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            this.db.close();
+        }
+        return news;
+    }
 
 
 }

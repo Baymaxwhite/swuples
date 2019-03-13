@@ -35,7 +35,10 @@ public class IndexServlet extends HttpServlet {
         request.getSession().setAttribute("areThree",new NewsServiceImpl().getNewsAreContent(3));
         request.getSession().setAttribute("areFour",new NewsServiceImpl().getNewsAreContent(4));
         request.getSession().setAttribute("areFive",new NewsServiceImpl().getNewsAreContent(5));
-        request.getSession().setAttribute("areSix",new NewsServiceImpl().getNewsAreContent(6));
+        request.getSession().setAttribute("areSix",new NewsServiceImpl().getNewsTitleContent("新浪微博"));
+        request.getSession().setAttribute("areSix2",new NewsServiceImpl().getNewsTitleContent("新浪微信"));
+        request.getSession().setAttribute("areSix1",new NewsServiceImpl().getNewsTitleContent("微博频道"));
+        System.out.println(new NewsServiceImpl().getNewsAreContent(6));
         request.getSession().setAttribute("areSeven",new NewsServiceImpl().getNewsAreContent(7));
         request.getSession().setAttribute("areEight",new NewsServiceImpl().getNewsAreContent(8));
         request.getSession().setAttribute("areNine",new NewsServiceImpl().getNewsAreContent(9));

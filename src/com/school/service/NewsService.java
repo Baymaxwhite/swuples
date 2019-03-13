@@ -14,9 +14,8 @@ public interface NewsService {
      */
     boolean insert(News vo) throws Exception;
 
-    public Map<String, Object> listBySplit(String column, String keyword, int currentPage, int lineSize) throws Exception;
+    public Map<String, Object> listBySplit(String column, String keyWord, int currentPage, int lineSize) throws Exception;
 
     News getNewsAreContent(int newsAre);
-
-//    List<News> findByNewsAre();
+    News getNewsTitleContent(String newsTitle);
 }

@@ -265,10 +265,10 @@
 							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
 						</div>
 						<div class="banner_qc">
-							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
+							<a href="#"><img src="${areSix2.newsImage}" />${areSix2.newsTitle}</a>
 						</div>
 						<div class="banner_qc">
-							<a href="#"><img src="${areSix.newsImage}" />${areSix.newsTitle}</a>
+							<a href="#"><img src="${areSix1.newsImage}" />${areSix1.newsTitle}</a>
 						</div>
 					</li>
 					<li>

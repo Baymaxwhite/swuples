@@ -29,12 +29,28 @@
         <url-pattern>/admin/UploadServlet/*</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>ResearchServlet</servlet-name>
+        <servlet-class>com.school.servlet.ResearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResearchServlet</servlet-name>
+        <url-pattern>/admin/ResearchServlet/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>com.school.servlet.IndexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/news/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ResearchsServlet</servlet-name>
+        <servlet-class>com.school.servlet.ResearchsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResearchsServlet</servlet-name>
+        <url-pattern>/research/*</url-pattern>
     </servlet-mapping>
 
 
